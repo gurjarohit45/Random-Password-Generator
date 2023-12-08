@@ -1,0 +1,223 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+#wrapper {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(
+    231deg,
+    rgb(14, 4, 72) 0%,
+    rgb(54, 12, 102) 50%,
+    rgb(43, 5, 125) 100%
+  );
+
+  display: grid;
+  place-items: center;
+  overflow: hidden auto;
+}
+
+.container {
+  width: 90%;
+  max-width: 450px;
+}
+
+.heading {
+  line-height: 1.2;
+  color: hsl(0, 0%, 100%);
+  opacity: 0.75;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.displayContainer {
+  position: relative;
+  background-color: hsl(240, 83%, 9%);
+  border-radius: 1rem;
+  border-bottom: 0.35rem solid hsl(268, 47%, 21%);
+  padding-top: 0.35rem;
+  margin: 1rem 0;
+}
+
+.displayContainer input {
+  width: 100%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 1.15rem 1rem;
+  color:hwb(36 0% 0%);
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 30px;
+  letter-spacing: 1px;
+  padding-right: 3.25rem;
+}
+
+.displayContainer input::placeholder {
+  color: hwb(36 0% 0%);
+  text-transform: uppercase;
+  opacity: 0.65;
+  font-size: 1.5rem;
+  line-height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 1.5rem;
+  transform: translateY(-50%);
+}
+
+.copyBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1.5rem;
+}
+
+
+.inputContainer {
+  background-color: hsl(240, 83%, 9%);
+  border-radius: 1rem;
+  border-bottom: 0.35rem solid hsl(281, 89%, 26%);
+  padding: 2rem;
+  width: 100%;
+}
+
+.lengthContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lengthContainer p:nth-child(1) {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.5rem;
+}
+
+.lengthContainer p:nth-child(2) {
+  color: hwb(36 0% 0%);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+
+.slider {
+  appearance: none;
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  height: 0.75rem;
+  background:hsl(268, 47%, 21%);
+  background-image: linear-gradient(hsl(239, 50%, 70%),hsl(239, 50%, 70%));
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.slider:focus {
+  outline: 3px solid hwb(36 0% 0%);
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: hwb(36 0% 0%);
+  box-shadow: 0px 0px 20px 0px rgba(211, 201, 4, 0.5);
+  transition: all 100ms ease-in;
+  cursor: pointer;
+  margin-top: -3px;
+  z-index: 2;
+  position: relative;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  outline: 2px solid hwb(36 0% 0%);
+  background-color: hsl(240, 83%, 9%);
+  box-shadow: 0px 0px 25px 5px rgba(23, 208, 122, 0.8);
+}
+
+.check {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0 1rem;
+}
+
+.check label {
+  text-transform: capitalize;
+  color:hsl(0, 0%, 100%);
+  font-size: 1.25rem;
+  letter-spacing: 0.75px;
+}
+
+.check input {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid  hsl(176, 100%, 44%);
+  cursor: pointer;
+  position: relative;
+  border-radius: 0.35rem;
+}
+
+.check input:checked {
+  background-color:  hsl(176, 100%, 44%);
+}
+
+.check input:checked::before {
+  position: absolute;
+  content: "✔";
+  color:  hsl(198, 20%, 13%);
+  font-size: 1.05rem;
+  font-weight: 600;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -3.5px;
+}
+
+.strengthContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.strengthContainer p {
+  color:hsl(0, 0%, 100%);
+  font-size: 1.5rem;
+}
+
+.indicator {
+  width: 1.5em;
+  height: 1.5rem;
+  border-radius: 50%;
+}
+
+
+#generateBtn {
+  background: hsl(239, 50%, 70%);
+  width: 100%;
+  padding: 1rem 0;
+  border-radius: 0.75rem;
+  border-bottom: 0.35rem solid rgba(218, 214, 206, 0.922);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color:#fff;
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-align: center;
+}
